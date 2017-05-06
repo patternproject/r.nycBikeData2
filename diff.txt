@@ -1,0 +1,7 @@
+1c1,4
+< ./1.Data/201601-citibike-tripdata.csv
+---
+> .Rproj.user
+> .Rhistory
+> .RData
+> .Ruserdata

@@ -1,0 +1,1 @@
+./1.Data/201601-citibike-tripdata.csv
