@@ -47,13 +47,13 @@ fn_dbCreateTable <- function() {
   df <- expand.grid(m = 7, y = 2013)
   c.temp.files <- sprintf("https://s3.amazonaws.com/tripdata/%d%02d-citibike-tripdata.zip", df$y, df$m)
   URL = c.temp.files[1]
-
+  
   # .csv corresponding the this .zip 
   c.csv.file = str_replace(basename(URL),".zip",".csv")
   
   # from "201307-citibike-tripdata.csv" to "2013-07 - Citi Bike trip data.csv"
   c.csv.file = paste0(substr(c.csv.file,1,4),"-",substr(c.csv.file,5,6)," ","-"," ","Citi Bike trip data.csv")
-
+  
   c.csv.file = file.path(c.home.dir,c.data.dir,c.csv.file)
   
   # checking if either .csv or .zip exist
@@ -100,13 +100,13 @@ fn_dbCreateTable <- function() {
   
   # 8. creating db tables
   bikes_sqlite <-
-     copy_to(
-       dest = my_db, # remote data source
-       df = df.1,# local data frame
-       name = "my_table", # name for new remote table.
-       temporary = FALSE, # if TRUE, will create a temporary table that is local to this connection and will be automatically deleted when the connection expires
-       indexes = list("starttime", "start_station_id", "tripduration")
-     )
+    copy_to(
+      dest = my_db, # remote data source
+      df = df.1,# local data frame
+      name = "my_table", # name for new remote table.
+      temporary = FALSE, # if TRUE, will create a temporary table that is local to this connection and will be automatically deleted when the connection expires
+      indexes = list("starttime", "start_station_id", "tripduration")
+    )
   
   # remove zip file
   # unlink(c.zip.name)
@@ -119,7 +119,7 @@ fn_dbCreateTable <- function() {
   rm(c.csv.file, myzip, URL, f.name, c.zip.name)
   rm(df, c.temp.files)
   
-
+  
 } # end fn_dbCreateTable
 
 
@@ -283,19 +283,19 @@ rm(i.remove,df)
 if(l.download.flag == 1)
 {
   c.files %>%
-  map(fn_downloadZip)
+    map(fn_downloadZip)
   
   # end if l.download.flag SET or TRUE
-  } else {
-    
-    # For R Projects the working directory is always set to the root folder, 
-    # so in order to load our data into R we need to first go into the “data” folder 
-    # and then read in the data file, thus our call is “data/my.data.file.txt”
-    
-    f.name = "C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201601-citibike-tripdata.csv"
-    
-    df.1 <- read_csv(f.name)
-
+} else {
+  
+  # For R Projects the working directory is always set to the root folder, 
+  # so in order to load our data into R we need to first go into the “data” folder 
+  # and then read in the data file, thus our call is “data/my.data.file.txt”
+  
+  f.name = "C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201601-citibike-tripdata.csv"
+  
+  df.1 <- read_csv(f.name)
+  
 } # end else l.download.flag NOT SET or FALSE
 
 
