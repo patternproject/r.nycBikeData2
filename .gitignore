@@ -2,4 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+./1.Data
+./3.References
 ./1.Data/201601-citibike-tripdata.csv
