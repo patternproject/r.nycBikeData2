@@ -13,14 +13,16 @@
 ## Details here: https://gist.github.com/patternproject/cc76f045464cee45e21017be6ebc0195
 ## 0 0 7: Clean up (3) - create a dummy table outside of purr loop. and "insert only" within the loop
 ## 0 0 8: Three helper functions 1) create table 2) insert into 3) files to download
-## 0 0 9: Added a few TODO to be fixed later. Insert into DB requires some fixing as no check is made
+## 0 0 9: a) Added a few TODO to be fixed later. 
+##        b) Insert into DB requires some fixing as no check is made
 ##        for unique values, you can insert a row as many time as you want
-## 0 1 0: DPLYR DB Functions do not allow putting "Unique" or "Key" Constraints. It can be 
+## 0 1 0: a) DPLYR DB Functions do not allow putting "Unique" or "Key" Constraints. It can be 
 ##        done manually as mentioned here
 ##        SRC: 
 ##        http://stackoverflow.com/questions/29541139/upsert-data-table-into-sql-database/29541538#29541538
 ##        But more simpler approach is to use "unique" after all insertions
-##        Moved db connection to "Clean Up" Section
+##        b) Moved db connection to "Clean Up" Section
+## 0 1 0: (Rev 2) Cleaned up "Read Me" by adding a) and b) if a particular version had more than one changes
 
 ## R DB Pointers
 # 1. https://datascienceplus.com/working-with-databases-in-r/
