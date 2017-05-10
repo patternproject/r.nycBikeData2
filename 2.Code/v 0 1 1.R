@@ -35,8 +35,8 @@
 
 ## 0 1 0: (Rev 2) Cleaned up "Read Me" by adding a) and b) if a particular version had more than one changes
 
-## 0 1 1: First build the analysis, then get the complete dataset. This version builds the basic analysis part
-##        Dplyr SQL Interface returns "tbl_sqlite" which has restrictions on what we can do with it. Shifting to plain SQL
+## 0 1 1: a) First build the analysis, then get the complete dataset. This version builds the basic analysis part
+##        b) Dplyr SQL Interface returns "tbl_sqlite" which has restrictions on what we can do with it. Shifting to plain SQL
 ##        returns a"r data frame" removing all restrictions of SQLLITE (such as Lack of support for Window Options) 
 
 
