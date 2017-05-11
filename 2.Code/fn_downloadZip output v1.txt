@@ -1,0 +1,544 @@
+## `````````````````````````````````````````````
+#### Read Me ####
+## `````````````````````````````````````````````
+
+# The output of fn_downlodaZip 
+# The start_time field seems to have different format across the files
+
+# This file is an effort to debug and fix the various formats  
+## `````````````````````````````````````````````
+
+
+
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201408-citibike-tripdata.zip
+corresponding extended csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/2014-08 - Citi Bike trip data.csv
+file already exists
+Parsed with column specification:
+  cols(
+    tripduration = col_integer(),
+    starttime = col_datetime(format = ""),
+    stoptime = col_datetime(format = ""),
+    `start station id` = col_integer(),
+    `start station name` = col_character(),
+    `start station latitude` = col_double(),
+    `start station longitude` = col_double(),
+    `end station id` = col_integer(),
+    `end station name` = col_character(),
+    `end station latitude` = col_double(),
+    `end station longitude` = col_double(),
+    bikeid = col_integer(),
+    usertype = col_character(),
+    `birth year` = col_character(),
+    gender = col_integer()
+  )
+|=========================================================================================================| 100%  179 MB
+starttime start_station_id tripduration
+1 2014-08-01 00:00:04              470         1142
+2 2014-08-31 23:59:47              498          471
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201409-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201409-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  175 MB
+Warning: 755248 parsing failures.
+row        col           expected     actual         file
+8 birth year delimiter or quote 0          literal data
+8 NA         15 columns         14 columns literal data
+15 birth year delimiter or quote 0          literal data
+15 NA         15 columns         14 columns literal data
+26 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2014-01-09 00:00:25              386         2828
+2                <NA>              147          978
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201410-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201410-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  153 MB
+Warning: 635007 parsing failures.
+row        col           expected     actual         file
+54 birth year delimiter or quote 0          literal data
+54 NA         15 columns         14 columns literal data
+134 birth year delimiter or quote 0          literal data
+134 NA         15 columns         14 columns literal data
+151 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2014-01-10 00:00:27              479         1027
+2                <NA>              383          756
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201411-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201411-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%   98 MB
+Warning: 318560 parsing failures.
+row        col           expected     actual         file
+42 birth year delimiter or quote 0          literal data
+42 NA         15 columns         14 columns literal data
+118 birth year delimiter or quote 0          literal data
+118 NA         15 columns         14 columns literal data
+120 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2014-01-11 00:00:11              344           97
+2                <NA>              329          246
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201412-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201412-citibike-tripdata.csv
+file already exists
+Warning: 264291 parsing failures.
+row        col           expected     actual         file
+1 birth year delimiter or quote 0          literal data
+1 NA         15 columns         14 columns literal data
+4 birth year delimiter or quote 0          literal data
+4 NA         15 columns         14 columns literal data
+11 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2014-01-12 00:00:28              475         1257
+2                <NA>              440         2048
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201501-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201501-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%   42 MB
+Warning: 285552 parsing failures.
+row       col                    expected        actual         file
+1 starttime date like %d/%m/%Y %H:%M:%S 1/1/2015 0:01 literal data
+2 starttime date like %d/%m/%Y %H:%M:%S 1/1/2015 0:02 literal data
+3 starttime date like %d/%m/%Y %H:%M:%S 1/1/2015 0:04 literal data
+4 starttime date like %d/%m/%Y %H:%M:%S 1/1/2015 0:04 literal data
+5 starttime date like %d/%m/%Y %H:%M:%S 1/1/2015 0:05 literal data
+... ......... ........................... ............. ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1      <NA>              455         1346
+2      <NA>              504          892
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201502-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201502-citibike-tripdata.csv
+file already exists
+Warning: 196930 parsing failures.
+row       col                    expected        actual         file
+1 starttime date like %d/%m/%Y %H:%M:%S 2/1/2015 0:00 literal data
+2 starttime date like %d/%m/%Y %H:%M:%S 2/1/2015 0:00 literal data
+3 starttime date like %d/%m/%Y %H:%M:%S 2/1/2015 0:01 literal data
+4 starttime date like %d/%m/%Y %H:%M:%S 2/1/2015 0:01 literal data
+5 starttime date like %d/%m/%Y %H:%M:%S 2/1/2015 0:01 literal data
+... ......... ........................... ............. ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1      <NA>              521          801
+2      <NA>              537          636
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201503-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201503-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%   50 MB
+Warning: 341826 parsing failures.
+row       col                    expected        actual         file
+1 starttime date like %d/%m/%Y %H:%M:%S 3/1/2015 0:00 literal data
+2 starttime date like %d/%m/%Y %H:%M:%S 3/1/2015 0:01 literal data
+3 starttime date like %d/%m/%Y %H:%M:%S 3/1/2015 0:01 literal data
+4 starttime date like %d/%m/%Y %H:%M:%S 3/1/2015 0:02 literal data
+5 starttime date like %d/%m/%Y %H:%M:%S 3/1/2015 0:02 literal data
+... ......... ........................... ............. ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1      <NA>              164          669
+2      <NA>              477          227
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201504-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201504-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  119 MB
+Warning: 568538 parsing failures.
+row        col           expected     actual         file
+99 birth year delimiter or quote 0          literal data
+99 NA         15 columns         14 columns literal data
+191 birth year delimiter or quote 0          literal data
+191 NA         15 columns         14 columns literal data
+237 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2015-01-04 00:00:23              494          241
+2                <NA>              494          380
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201505-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201505-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  176 MB
+Warning: 932654 parsing failures.
+row        col           expected     actual         file
+2 birth year delimiter or quote 0          literal data
+2 NA         15 columns         14 columns literal data
+11 birth year delimiter or quote 0          literal data
+11 NA         15 columns         14 columns literal data
+13 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2015-01-05 00:00:11              477          415
+2                <NA>              453          750
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201506-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201506-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  139 MB
+Warning: 941219 parsing failures.
+row       col                    expected        actual         file
+1 starttime date like %d/%m/%Y %H:%M:%S 6/1/2015 0:00 literal data
+2 starttime date like %d/%m/%Y %H:%M:%S 6/1/2015 0:00 literal data
+3 starttime date like %d/%m/%Y %H:%M:%S 6/1/2015 0:01 literal data
+4 starttime date like %d/%m/%Y %H:%M:%S 6/1/2015 0:01 literal data
+5 starttime date like %d/%m/%Y %H:%M:%S 6/1/2015 0:02 literal data
+... ......... ........................... ............. ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1      <NA>              128         1338
+2      <NA>              308          667
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201507-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201507-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  199 MB
+Warning: 1058326 parsing failures.
+row        col           expected     actual         file
+9 birth year delimiter or quote 0          literal data
+9 NA         15 columns         14 columns literal data
+11 birth year delimiter or quote 0          literal data
+11 NA         15 columns         14 columns literal data
+18 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2015-01-07 00:00:03              489          732
+2                <NA>             2021         1667
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201508-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201508-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  216 MB
+Warning: 1170848 parsing failures.
+row        col           expected     actual         file
+8 birth year delimiter or quote 0          literal data
+8 NA         15 columns         14 columns literal data
+9 birth year delimiter or quote 0          literal data
+9 NA         15 columns         14 columns literal data
+11 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2015-01-08 00:00:04              168         1202
+2                <NA>              476          105
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201509-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201509-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  237 MB
+Warning: 1249390 parsing failures.
+row        col           expected     actual         file
+3 birth year delimiter or quote 0          literal data
+3 NA         15 columns         14 columns literal data
+8 birth year delimiter or quote 0          literal data
+8 NA         15 columns         14 columns literal data
+10 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2015-01-09              263          288
+2       <NA>              228         1106
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201510-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201510-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  226 MB
+Warning: 1058561 parsing failures.
+row        col           expected     actual         file
+5 birth year delimiter or quote 0          literal data
+5 NA         15 columns         14 columns literal data
+6 birth year delimiter or quote 0          literal data
+6 NA         15 columns         14 columns literal data
+31 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2015-01-10 00:00:02              388          171
+2                <NA>              468          807
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201511-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201511-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  184 MB
+Warning: 717536 parsing failures.
+row        col           expected     actual         file
+6 birth year delimiter or quote 0          literal data
+6 NA         15 columns         14 columns literal data
+12 birth year delimiter or quote 0          literal data
+12 NA         15 columns         14 columns literal data
+13 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2015-01-11              537         1110
+2       <NA>              279          234
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201512-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201512-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  150 MB
+Warning: 562568 parsing failures.
+row        col           expected     actual         file
+25 birth year delimiter or quote 0          literal data
+25 NA         15 columns         14 columns literal data
+74 birth year delimiter or quote 0          literal data
+74 NA         15 columns         14 columns literal data
+75 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2015-01-12 07:35:36               72          475
+2                <NA>             3242          395
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201601-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201601-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%   94 MB
+Warning: 315507 parsing failures.
+row        col           expected     actual         file
+20 birth year delimiter or quote 0          literal data
+20 NA         15 columns         14 columns literal data
+21 birth year delimiter or quote 0          literal data
+21 NA         15 columns         14 columns literal data
+23 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2016-01-01 00:00:41              268          923
+2                <NA>              377          851
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201602-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201602-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  103 MB
+Warning: 376103 parsing failures.
+row        col           expected     actual         file
+11 birth year delimiter or quote 0          literal data
+11 NA         15 columns         14 columns literal data
+33 birth year delimiter or quote 0          literal data
+33 NA         15 columns         14 columns literal data
+34 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2016-01-02 00:00:08              480          461
+2                <NA>             3107          301
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201603-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201603-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  170 MB
+Warning: 748697 parsing failures.
+row        col           expected     actual         file
+36 birth year delimiter or quote 0          literal data
+36 NA         15 columns         14 columns literal data
+91 birth year delimiter or quote 0          literal data
+91 NA         15 columns         14 columns literal data
+92 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2016-01-03 06:52:42               72         1491
+2                <NA>             3246         1188
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201604-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201604-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  188 MB
+Warning: 981611 parsing failures.
+row        col           expected     actual         file
+36 birth year delimiter or quote 0          literal data
+36 NA         15 columns         14 columns literal data
+39 birth year delimiter or quote 0          literal data
+39 NA         15 columns         14 columns literal data
+45 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2016-01-04 00:00:26              254          496
+2                <NA>              263          102
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201605-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201605-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  225 MB
+Warning: 1146146 parsing failures.
+row        col           expected     actual         file
+4 birth year delimiter or quote 0          literal data
+4 NA         15 columns         14 columns literal data
+14 birth year delimiter or quote 0          literal data
+14 NA         15 columns         14 columns literal data
+19 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2016-01-05 00:00:03              536          538
+2                <NA>              477          457
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201606-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201606-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  271 MB
+Warning: 1305233 parsing failures.
+row        col           expected     actual         file
+35 birth year delimiter or quote 0          literal data
+35 NA         15 columns         14 columns literal data
+40 birth year delimiter or quote 0          literal data
+40 NA         15 columns         14 columns literal data
+48 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2016-01-06 00:00:18              380         1470
+2                <NA>              348         2854
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201607-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201607-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  257 MB
+Warning: 1263788 parsing failures.
+row        col           expected     actual         file
+1 birth year delimiter or quote 0          literal data
+1 NA         15 columns         14 columns literal data
+4 birth year delimiter or quote 0          literal data
+4 NA         15 columns         14 columns literal data
+5 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2016-01-07 00:00:02              459          704
+2                <NA>              507          330
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201608-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201608-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  290 MB
+Warning: 1375330 parsing failures.
+row        col           expected     actual         file
+21 birth year delimiter or quote 0          literal data
+21 NA         15 columns         14 columns literal data
+24 birth year delimiter or quote 0          literal data
+24 NA         15 columns         14 columns literal data
+29 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1 2016-01-08 00:01:22              302          288
+2                <NA>              457         2245
+[[1]]
+NULL
+
+[[2]]
+NULL
+
+[[3]]
+NULL
+
+[[4]]
+NULL
+
+[[5]]
+NULL
+
+[[6]]
+NULL
+
+[[7]]
+NULL
+
+[[8]]
+NULL
+
+[[9]]
+NULL
+
+[[10]]
+NULL
+
+[[11]]
+NULL
+
+[[12]]
+NULL
+
+[[13]]
+NULL
+
+[[14]]
+NULL
+
+[[15]]
+NULL
+
+[[16]]
+NULL
+
+[[17]]
+NULL
+
+[[18]]
+NULL
+
+[[19]]
+NULL
+
+[[20]]
+NULL
+
+[[21]]
+NULL
+
+[[22]]
+NULL
+
+[[23]]
+NULL
+
+[[24]]
+NULL
+
+[[25]]
+NULL
+
+There were 24 warnings (use warnings() to see them)
