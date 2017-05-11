@@ -1,0 +1,142 @@
+## `````````````````````````````````````````````
+#### Read Me ####
+## `````````````````````````````````````````````
+
+# The output of fn_downlodaZip 
+# The start_time field seems to have different format across the files
+
+# This file is an effort to debug and fix the various formats  
+
+# v 2: Removing diagnostic messages for files where error do not relate to "start time"
+# v 3: Adding few lines from problematic files. In review all four are similar to each other but differ 
+       from the common format in other files. Namely no quotes and missing second part
+## `````````````````````````````````````````````
+
+# ----------------------
+#### 201501
+# ----------------------
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201501-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201501-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%   42 MB
+Warning: 285552 parsing failures.
+row       col                    expected        actual         file
+1 starttime date like %d/%m/%Y %H:%M:%S 1/1/2015 0:01 literal data
+2 starttime date like %d/%m/%Y %H:%M:%S 1/1/2015 0:02 literal data
+3 starttime date like %d/%m/%Y %H:%M:%S 1/1/2015 0:04 literal data
+4 starttime date like %d/%m/%Y %H:%M:%S 1/1/2015 0:04 literal data
+5 starttime date like %d/%m/%Y %H:%M:%S 1/1/2015 0:05 literal data
+... ......... ........................... ............. ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1      <NA>              455         1346
+2      <NA>              504          892
+
+# ----------
+SAMPLE ENTRY
+# ----------
+tripduration,starttime,stoptime,start station id,start station name,start station latitude,start station longitude,end station id,end station name,end station latitude,end station longitude,bikeid,usertype,birth year,gender
+1346,1/1/2015 0:01,1/1/2015 0:24,455,1 Ave & E 44 St,40.75001986,-73.96905301,265,Stanton St & Chrystie St,40.72229346,-73.99147535,18660,Subscriber,1960,2
+
+--> 2 Differences
+1) No Quotes in either col names or data values
+2) Starttime format: 1/1/2015 0:01 (no second part)
+
+
+# ----------------------
+#### 201502
+# ----------------------
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201502-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201502-citibike-tripdata.csv
+file already exists
+Warning: 196930 parsing failures.
+row       col                    expected        actual         file
+1 starttime date like %d/%m/%Y %H:%M:%S 2/1/2015 0:00 literal data
+2 starttime date like %d/%m/%Y %H:%M:%S 2/1/2015 0:00 literal data
+3 starttime date like %d/%m/%Y %H:%M:%S 2/1/2015 0:01 literal data
+4 starttime date like %d/%m/%Y %H:%M:%S 2/1/2015 0:01 literal data
+5 starttime date like %d/%m/%Y %H:%M:%S 2/1/2015 0:01 literal data
+... ......... ........................... ............. ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1      <NA>              521          801
+2      <NA>              537          636
+
+# ----------
+SAMPLE ENTRY
+# ----------
+tripduration,starttime,stoptime,start station id,start station name,start station latitude,start station longitude,end station id,end station name,end station latitude,end station longitude,bikeid,usertype,birth year,gender
+801,2/1/2015 0:00,2/1/2015 0:14,521,8 Ave & W 31 St,40.75044999,-73.99481051,423,W 54 St & 9 Ave,40.76584941,-73.98690506,17131,Subscriber,1978,2
+
+--> 2 Differences
+1) No Quotes in either col names or data values
+2) Starttime format: 2/1/2015 0:00 (no second part)
+
+
+# ----------------------
+#### 201503
+# ----------------------
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201503-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201503-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%   50 MB
+Warning: 341826 parsing failures.
+row       col                    expected        actual         file
+1 starttime date like %d/%m/%Y %H:%M:%S 3/1/2015 0:00 literal data
+2 starttime date like %d/%m/%Y %H:%M:%S 3/1/2015 0:01 literal data
+3 starttime date like %d/%m/%Y %H:%M:%S 3/1/2015 0:01 literal data
+4 starttime date like %d/%m/%Y %H:%M:%S 3/1/2015 0:02 literal data
+5 starttime date like %d/%m/%Y %H:%M:%S 3/1/2015 0:02 literal data
+... ......... ........................... ............. ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1      <NA>              164          669
+2      <NA>              477          227
+
+# ----------
+SAMPLE ENTRY
+# ----------
+
+tripduration,starttime,stoptime,start station id,start station name,start station latitude,start station longitude,end station id,end station name,end station latitude,end station longitude,bikeid,usertype,birth year,gender
+669,3/1/2015 0:00,3/1/2015 0:11,164,E 47 St & 2 Ave,40.75323098,-73.97032517,477,W 41 St & 8 Ave,40.75640548,-73.9900262,21409,Subscriber,1987,1
+
+--> 2 Differences
+1) No Quotes in either col names or data values
+2) Starttime format: 3/1/2015 0:00 (no second part)
+
+# ----------------------
+#### 201506
+# ----------------------
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201506-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201506-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  139 MB
+Warning: 941219 parsing failures.
+row       col                    expected        actual         file
+1 starttime date like %d/%m/%Y %H:%M:%S 6/1/2015 0:00 literal data
+2 starttime date like %d/%m/%Y %H:%M:%S 6/1/2015 0:00 literal data
+3 starttime date like %d/%m/%Y %H:%M:%S 6/1/2015 0:01 literal data
+4 starttime date like %d/%m/%Y %H:%M:%S 6/1/2015 0:01 literal data
+5 starttime date like %d/%m/%Y %H:%M:%S 6/1/2015 0:02 literal data
+... ......... ........................... ............. ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1      <NA>              128         1338
+2      <NA>              308          667
+
+# ----------
+SAMPLE ENTRY
+# ----------
+tripduration,starttime,stoptime,start station id,start station name,start station latitude,start station longitude,end station id,end station name,end station latitude,end station longitude,bikeid,usertype,birth year,gender
+1338,6/1/2015 0:00,6/1/2015 0:22,128,MacDougal St & Prince St,40.72710258,-74.00297088,2021,W 45 St & 8 Ave,40.75929124,-73.98859651,20721,Subscriber,1984,1
+
+--> 2 Differences
+1) No Quotes in either col names or data values
+2) Starttime format: 6/1/2015 0:00 (no second part)
