@@ -1,0 +1,84 @@
+## `````````````````````````````````````````````
+#### Read Me ####
+## `````````````````````````````````````````````
+
+# The output of fn_downlodaZip 
+# The start_time field seems to have different format across the files
+
+# This file is an effort to debug and fix the various formats  
+
+# v 2: Removing diagnostic messages for files where error do not relate to "start time"
+## `````````````````````````````````````````````
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201501-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201501-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%   42 MB
+Warning: 285552 parsing failures.
+row       col                    expected        actual         file
+1 starttime date like %d/%m/%Y %H:%M:%S 1/1/2015 0:01 literal data
+2 starttime date like %d/%m/%Y %H:%M:%S 1/1/2015 0:02 literal data
+3 starttime date like %d/%m/%Y %H:%M:%S 1/1/2015 0:04 literal data
+4 starttime date like %d/%m/%Y %H:%M:%S 1/1/2015 0:04 literal data
+5 starttime date like %d/%m/%Y %H:%M:%S 1/1/2015 0:05 literal data
+... ......... ........................... ............. ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1      <NA>              455         1346
+2      <NA>              504          892
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201502-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201502-citibike-tripdata.csv
+file already exists
+Warning: 196930 parsing failures.
+row       col                    expected        actual         file
+1 starttime date like %d/%m/%Y %H:%M:%S 2/1/2015 0:00 literal data
+2 starttime date like %d/%m/%Y %H:%M:%S 2/1/2015 0:00 literal data
+3 starttime date like %d/%m/%Y %H:%M:%S 2/1/2015 0:01 literal data
+4 starttime date like %d/%m/%Y %H:%M:%S 2/1/2015 0:01 literal data
+5 starttime date like %d/%m/%Y %H:%M:%S 2/1/2015 0:01 literal data
+... ......... ........................... ............. ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1      <NA>              521          801
+2      <NA>              537          636
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201503-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201503-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%   50 MB
+Warning: 341826 parsing failures.
+row       col                    expected        actual         file
+1 starttime date like %d/%m/%Y %H:%M:%S 3/1/2015 0:00 literal data
+2 starttime date like %d/%m/%Y %H:%M:%S 3/1/2015 0:01 literal data
+3 starttime date like %d/%m/%Y %H:%M:%S 3/1/2015 0:01 literal data
+4 starttime date like %d/%m/%Y %H:%M:%S 3/1/2015 0:02 literal data
+5 starttime date like %d/%m/%Y %H:%M:%S 3/1/2015 0:02 literal data
+... ......... ........................... ............. ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1      <NA>              164          669
+2      <NA>              477          227
+
+----entering fn_downloadZipprocessing file:  https://s3.amazonaws.com/tripdata/201506-citibike-tripdata.zip
+corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201506-citibike-tripdata.csv
+file already exists
+|=========================================================================================================| 100%  139 MB
+Warning: 941219 parsing failures.
+row       col                    expected        actual         file
+1 starttime date like %d/%m/%Y %H:%M:%S 6/1/2015 0:00 literal data
+2 starttime date like %d/%m/%Y %H:%M:%S 6/1/2015 0:00 literal data
+3 starttime date like %d/%m/%Y %H:%M:%S 6/1/2015 0:01 literal data
+4 starttime date like %d/%m/%Y %H:%M:%S 6/1/2015 0:01 literal data
+5 starttime date like %d/%m/%Y %H:%M:%S 6/1/2015 0:02 literal data
+... ......... ........................... ............. ............
+See problems(...) for more details.
+
+starttime start_station_id tripduration
+1      <NA>              128         1338
+2      <NA>              308          667
+
+
