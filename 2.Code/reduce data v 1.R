@@ -43,7 +43,7 @@ df.1 = read_file(c.csv.temp.file) %>%
   #read_csv(col_names = TRUE, col_types=cols(starttime="T"("%d/%m/%Y %H:%M:%S")))
   #read_csv(col_names = TRUE, col_types=cols(starttime="T"))
   read_csv(col_names = TRUE, col_types=cols(starttime=col_datetime("%d/%m/%Y %H:%M:%S")))
-  # this read_csv is the magical line that needs to go back to v 0 4
+# this read_csv is the magical line that needs to go back to v 0 4
 
 
 # 5. fix col names for df.1
