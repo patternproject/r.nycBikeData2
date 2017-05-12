@@ -1,0 +1,716 @@
+## `````````````````````````````````````````````
+#### Read Me ####
+## `````````````````````````````````````````````
+
+# The output of fn_downlodaZip 
+# The start_time field seems to have different format across the files
+
+# This file is an effort to debug and fix the various formats  
+
+# v 2: Removing diagnostic messages for files where error do not relate to "start time"
+# v 3: Adding few lines from problematic files. In review all four are similar to each other but differ 
+       from the common format in other files. Namely no quotes and missing second part
+# v 4: Lets see what fn_downloadZip v1 produces. Helped catch wrong order of m and d in 
+#      starttime = col_datetime("%m/%d/%Y %H:%M:%S"
+# v 5: Output of 0 1 6, which leads to successful reading of all csv files
+## `````````````````````````````````````````````
+
+> # Insert this files into the db
+> c.files %>%
++   map(fn_downloadZip)
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201408-citibike-tripdata.zip
+corresponding extended csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/2014-08 - Citi Bike trip data.csv
+file already exists
+Parsed with column specification:
+cols(
+  tripduration = col_integer(),
+  starttime = col_datetime(format = ""),
+  stoptime = col_datetime(format = ""),
+  `start station id` = col_integer(),
+  `start station name` = col_character(),
+  `start station latitude` = col_double(),
+  `start station longitude` = col_double(),
+  `end station id` = col_integer(),
+  `end station name` = col_character(),
+  `end station latitude` = col_double(),
+  `end station longitude` = col_double(),
+  bikeid = col_integer(),
+  usertype = col_character(),
+  `birth year` = col_character(),
+  gender = col_integer()
+)
+|=========================================================================================================| 100%  179 MB
+            starttime start_station_id tripduration
+1 2014-08-01 00:00:04              470         1142
+2 2014-08-31 23:59:47              498          471
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201409-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201409-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%  175 MB
+Warning: 198650 parsing failures.
+row        col           expected     actual         file
+  8 birth year delimiter or quote 0          literal data
+  8 NA         15 columns         14 columns literal data
+ 15 birth year delimiter or quote 0          literal data
+ 15 NA         15 columns         14 columns literal data
+ 26 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2014-09-01 00:00:25              386         2828
+2 2014-09-30 23:59:59              147          978
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201410-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201410-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%  153 MB
+Warning: 138174 parsing failures.
+row        col           expected     actual         file
+ 54 birth year delimiter or quote 0          literal data
+ 54 NA         15 columns         14 columns literal data
+134 birth year delimiter or quote 0          literal data
+134 NA         15 columns         14 columns literal data
+151 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2014-10-01 00:00:27              479         1027
+2 2014-10-31 23:59:50              383          756
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201411-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201411-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%   98 MB
+Warning: 56052 parsing failures.
+row        col           expected     actual         file
+ 42 birth year delimiter or quote 0          literal data
+ 42 NA         15 columns         14 columns literal data
+118 birth year delimiter or quote 0          literal data
+118 NA         15 columns         14 columns literal data
+120 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2014-11-01 00:00:11              344           97
+2 2014-11-30 23:59:58              329          246
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201412-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201412-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%   74 MB
+Warning: 32992 parsing failures.
+row        col           expected     actual         file
+  1 birth year delimiter or quote 0          literal data
+  1 NA         15 columns         14 columns literal data
+  4 birth year delimiter or quote 0          literal data
+  4 NA         15 columns         14 columns literal data
+ 11 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2014-12-01 00:00:28              475         1257
+2 2014-12-31 23:58:16              440         2048
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201501-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201501-citibike-tripdata.csv
+file already exists
+
+ entering nested if block for normal .csv files - special handling for data file: 201501,201502,201503,201506
+ these have missing second in start time field
+            starttime start_station_id tripduration
+1 2015-01-01 00:01:00              455         1346
+2 2015-01-31 23:59:00              504          892
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201502-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201502-citibike-tripdata.csv
+file already exists
+
+ entering nested if block for normal .csv files - special handling for data file: 201501,201502,201503,201506
+ these have missing second in start time field
+            starttime start_station_id tripduration
+1 2015-02-01 00:00:00              521          801
+2 2015-02-28 23:59:00              537          636
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201503-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201503-citibike-tripdata.csv
+file already exists
+
+ entering nested if block for normal .csv files - special handling for data file: 201501,201502,201503,201506
+ these have missing second in start time field
+            starttime start_station_id tripduration
+1 2015-03-01 00:00:00              164          669
+2 2015-03-31 23:55:00              477          227
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201504-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201504-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%  119 MB
+Warning: 132434 parsing failures.
+row        col           expected     actual         file
+ 99 birth year delimiter or quote 0          literal data
+ 99 NA         15 columns         14 columns literal data
+191 birth year delimiter or quote 0          literal data
+191 NA         15 columns         14 columns literal data
+237 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2015-04-01 00:00:23              494          241
+2 2015-04-30 23:59:55              494          380
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201505-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201505-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%  176 MB
+Warning: 335104 parsing failures.
+row        col           expected     actual         file
+  2 birth year delimiter or quote 0          literal data
+  2 NA         15 columns         14 columns literal data
+ 11 birth year delimiter or quote 0          literal data
+ 11 NA         15 columns         14 columns literal data
+ 13 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2015-05-01 00:00:11              477          415
+2 2015-05-31 23:59:59              453          750
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201506-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201506-citibike-tripdata.csv
+file already exists
+
+ entering nested if block for normal .csv files - special handling for data file: 201501,201502,201503,201506
+ these have missing second in start time field
+|=========================================================================================================| 100%  139 MB
+            starttime start_station_id tripduration
+1 2015-06-01 00:00:00              128         1338
+2 2015-06-30 23:59:00              308          667
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201507-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201507-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%  199 MB
+Warning: 360730 parsing failures.
+row        col           expected     actual         file
+  9 birth year delimiter or quote 0          literal data
+  9 NA         15 columns         14 columns literal data
+ 11 birth year delimiter or quote 0          literal data
+ 11 NA         15 columns         14 columns literal data
+ 18 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2015-07-01 00:00:03              489          732
+2 2015-07-31 23:59:59             2021         1667
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201508-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201508-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%  216 MB
+Warning: 442002 parsing failures.
+row        col           expected     actual         file
+  8 birth year delimiter or quote 0          literal data
+  8 NA         15 columns         14 columns literal data
+  9 birth year delimiter or quote 0          literal data
+  9 NA         15 columns         14 columns literal data
+ 11 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2015-08-01 00:00:04              168         1202
+2 2015-08-31 23:59:41              476          105
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201509-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201509-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%  237 MB
+Warning: 420226 parsing failures.
+row        col           expected     actual         file
+  3 birth year delimiter or quote 0          literal data
+  3 NA         15 columns         14 columns literal data
+  8 birth year delimiter or quote 0          literal data
+  8 NA         15 columns         14 columns literal data
+ 10 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2015-09-01 00:00:00              263          288
+2 2015-09-30 23:59:57              228         1106
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201510-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201510-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%  226 MB
+Warning: 293024 parsing failures.
+row        col           expected     actual         file
+  5 birth year delimiter or quote 0          literal data
+  5 NA         15 columns         14 columns literal data
+  6 birth year delimiter or quote 0          literal data
+  6 NA         15 columns         14 columns literal data
+ 31 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2015-10-01 00:00:02              388          171
+2 2015-10-31 23:59:57              468          807
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201511-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201511-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%  184 MB
+Warning: 201202 parsing failures.
+row        col           expected     actual         file
+  6 birth year delimiter or quote 0          literal data
+  6 NA         15 columns         14 columns literal data
+ 12 birth year delimiter or quote 0          literal data
+ 12 NA         15 columns         14 columns literal data
+ 13 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2015-11-01 00:00:00              537         1110
+2 2015-11-30 23:59:11              279          234
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201512-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201512-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%  150 MB
+Warning: 135754 parsing failures.
+row        col           expected     actual         file
+ 25 birth year delimiter or quote 0          literal data
+ 25 NA         15 columns         14 columns literal data
+ 74 birth year delimiter or quote 0          literal data
+ 74 NA         15 columns         14 columns literal data
+ 75 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2015-12-01 07:35:36               72          475
+2 2015-12-31 21:49:19             3242          395
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201601-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201601-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+Warning: 49090 parsing failures.
+row        col           expected     actual         file
+ 20 birth year delimiter or quote 0          literal data
+ 20 NA         15 columns         14 columns literal data
+ 21 birth year delimiter or quote 0          literal data
+ 21 NA         15 columns         14 columns literal data
+ 23 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2016-01-01 00:00:41              268          923
+2 2016-01-31 23:59:26              377          851
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201602-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201602-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%  103 MB
+Warning: 59652 parsing failures.
+row        col           expected     actual         file
+ 11 birth year delimiter or quote 0          literal data
+ 11 NA         15 columns         14 columns literal data
+ 33 birth year delimiter or quote 0          literal data
+ 33 NA         15 columns         14 columns literal data
+ 34 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2016-02-01 00:00:08              480          461
+2 2016-02-29 23:59:55             3107          301
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201603-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201603-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%  170 MB
+Warning: 186486 parsing failures.
+row        col           expected     actual         file
+ 36 birth year delimiter or quote 0          literal data
+ 36 NA         15 columns         14 columns literal data
+ 91 birth year delimiter or quote 0          literal data
+ 91 NA         15 columns         14 columns literal data
+ 92 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2016-03-01 06:52:42               72         1491
+2 2016-03-31 20:59:23             3246         1188
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201604-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201604-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%  188 MB
+Warning: 260940 parsing failures.
+row        col           expected     actual         file
+ 36 birth year delimiter or quote 0          literal data
+ 36 NA         15 columns         14 columns literal data
+ 39 birth year delimiter or quote 0          literal data
+ 39 NA         15 columns         14 columns literal data
+ 45 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2016-04-01 00:00:26              254          496
+2 2016-04-30 23:59:53              263          102
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201605-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201605-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%  225 MB
+Warning: 352642 parsing failures.
+row        col           expected     actual         file
+  4 birth year delimiter or quote 0          literal data
+  4 NA         15 columns         14 columns literal data
+ 14 birth year delimiter or quote 0          literal data
+ 14 NA         15 columns         14 columns literal data
+ 19 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2016-05-01 00:00:03              536          538
+2 2016-05-31 23:59:43              477          457
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201606-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201606-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|=========================================================================================================| 100%  271 MB
+Warning: 390412 parsing failures.
+row        col           expected     actual         file
+ 35 birth year delimiter or quote 0          literal data
+ 35 NA         15 columns         14 columns literal data
+ 40 birth year delimiter or quote 0          literal data
+ 40 NA         15 columns         14 columns literal data
+ 48 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2016-06-01 00:00:18              380         1470
+2 2016-06-29 11:44:24              348         2854
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201607-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201607-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|========================================================================================================| 100%  257 MB
+Warning: 407190 parsing failures.
+row        col           expected     actual         file
+  1 birth year delimiter or quote 0          literal data
+  1 NA         15 columns         14 columns literal data
+  4 birth year delimiter or quote 0          literal data
+  4 NA         15 columns         14 columns literal data
+  5 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2016-07-01 00:00:02              459          704
+2 2016-07-31 23:59:59              507          330
+
+ ----entering fn_downloadZip 
+processing file:  https://s3.amazonaws.com/tripdata/201608-citibike-tripdata.zip
+
+ entering if else block for normal .csv files
+ normal means the file name is not expanded. Quote Issues or DateTime issues still there
+ corresponding csv file:  C:/Users/burhan.haq/Downloads/Perso/23. r Practise/5. NYC Bike 2/1.Data/201608-citibike-tripdata.csv
+file already exists
+
+ entering nested else block for normal .csv files - 
+ these have second in start time field, along with quotes in col name and data
+|========================================================================================================| 100%  290 MB
+Warning: 429248 parsing failures.
+row        col           expected     actual         file
+ 21 birth year delimiter or quote 0          literal data
+ 21 NA         15 columns         14 columns literal data
+ 24 birth year delimiter or quote 0          literal data
+ 24 NA         15 columns         14 columns literal data
+ 29 birth year delimiter or quote 0          literal data
+... .......... .................. .......... ............
+See problems(...) for more details.
+
+            starttime start_station_id tripduration
+1 2016-08-01 00:01:22              302          288
+2 2016-08-29 16:25:46              457         2245
+[[1]]
+NULL
+
+[[2]]
+NULL
+
+[[3]]
+NULL
+
+[[4]]
+NULL
+
+[[5]]
+NULL
+
+[[6]]
+NULL
+
+[[7]]
+NULL
+
+[[8]]
+NULL
+
+[[9]]
+NULL
+
+[[10]]
+NULL
+
+[[11]]
+NULL
+
+[[12]]
+NULL
+
+[[13]]
+NULL
+
+[[14]]
+NULL
+
+[[15]]
+NULL
+
+[[16]]
+NULL
+
+[[17]]
+NULL
+
+[[18]]
+NULL
+
+[[19]]
+NULL
+
+[[20]]
+NULL
+
+[[21]]
+NULL
+
+[[22]]
+NULL
+
+[[23]]
+NULL
+
+[[24]]
+NULL
+
+[[25]]
+NULL
+
+There were 25 warnings (use warnings() to see them) 
+
+--=-=-=-=-=-=-=-=-=-
+
+> warnings()
+Warning messages:
+1: closing unused connection 5 (https://s3.amazonaws.com/tripdata/201409-citibike-tripdata.zip:201409-citibike-tripdata.zip)
+2: closing unused connection 4 (https://s3.amazonaws.com/tripdata/201408-citibike-tripdata.zip:201408-citibike-tripdata.zip)
+3: closing unused connection 6 (https://s3.amazonaws.com/tripdata/201410-citibike-tripdata.zip:201410-citibike-tripdata.zip)
+4: closing unused connection 3 (https://s3.amazonaws.com/tripdata/201509-citibike-tripdata.zip:201509-citibike-tripdata.zip)
+5: closing unused connection 8 (https://s3.amazonaws.com/tripdata/201504-citibike-tripdata.zip:201504-citibike-tripdata.zip)
+6: closing unused connection 7 (https://s3.amazonaws.com/tripdata/201503-citibike-tripdata.zip:201503-citibike-tripdata.zip)
+7: closing unused connection 6 (https://s3.amazonaws.com/tripdata/201502-citibike-tripdata.zip:201502-citibike-tripdata.zip)
+8: closing unused connection 5 (https://s3.amazonaws.com/tripdata/201501-citibike-tripdata.zip:201501-citibike-tripdata.zip)
+9: closing unused connection 3 (https://s3.amazonaws.com/tripdata/201412-citibike-tripdata.zip:201412-citibike-tripdata.zip)
+10: In .Internal(vapply(X, FUN, FUN.VALUE, USE.NAMES)) :
+  closing unused connection 9 (https://s3.amazonaws.com/tripdata/201505-citibike-tripdata.zip:201505-citibike-tripdata.zip)
+11: In .Internal(vapply(X, FUN, FUN.VALUE, USE.NAMES)) :
+  closing unused connection 4 (https://s3.amazonaws.com/tripdata/201411-citibike-tripdata.zip:201411-citibike-tripdata.zip)
+12: closing unused connection 4 (https://s3.amazonaws.com/tripdata/201507-citibike-tripdata.zip:201507-citibike-tripdata.zip)
+13: closing unused connection 3 (https://s3.amazonaws.com/tripdata/201506-citibike-tripdata.zip:201506-citibike-tripdata.zip)
+14: In .Internal(vapply(X, FUN, FUN.VALUE, USE.NAMES)) :
+  closing unused connection 5 (https://s3.amazonaws.com/tripdata/201508-citibike-tripdata.zip:201508-citibike-tripdata.zip)
+15: closing unused connection 3 (https://s3.amazonaws.com/tripdata/201509-citibike-tripdata.zip:201509-citibike-tripdata.zip)
+16: In .Internal(vapply(X, FUN, FUN.VALUE, USE.NAMES)) :
+  closing unused connection 4 (https://s3.amazonaws.com/tripdata/201510-citibike-tripdata.zip:201510-citibike-tripdata.zip)
+17: closing unused connection 4 (https://s3.amazonaws.com/tripdata/201512-citibike-tripdata.zip:201512-citibike-tripdata.zip)
+18: In list(...) :
+  closing unused connection 4 (https://s3.amazonaws.com/tripdata/201602-citibike-tripdata.zip:201602-citibike-tripdata.zip)
+19: In list(...) :
+  closing unused connection 5 (https://s3.amazonaws.com/tripdata/201601-citibike-tripdata.zip:201601-citibike-tripdata.zip)
+20: In list(...) :
+  closing unused connection 3 (https://s3.amazonaws.com/tripdata/201511-citibike-tripdata.zip:201511-citibike-tripdata.zip)
+21: closing unused connection 3 (https://s3.amazonaws.com/tripdata/201604-citibike-tripdata.zip:201604-citibike-tripdata.zip)
+22: closing unused connection 6 (https://s3.amazonaws.com/tripdata/201603-citibike-tripdata.zip:201603-citibike-tripdata.zip)
+23: closing unused connection 3 (https://s3.amazonaws.com/tripdata/201606-citibike-tripdata.zip:201606-citibike-tripdata.zip)
+24: closing unused connection 4 (https://s3.amazonaws.com/tripdata/201605-citibike-tripdata.zip:201605-citibike-tripdata.zip)
+25: closing unused connection 5 (https://s3.amazonaws.com/tripdata/201607-citibike-tripdata.zip:201607-citibike-tripdata.zip)
